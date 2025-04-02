@@ -92,7 +92,6 @@ export default function App() {
         )}
       />
 
-      {/* Modal para exibir a imagem em tela cheia */}
       <Modal visible={modalVisible} transparent animationType="slide">
         <View style={styles.modalContainer}>
           <TouchableOpacity style={styles.closeArea} onPress={() => setModalVisible(false)} />
@@ -114,23 +113,98 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: width * 0.05, backgroundColor: '#f8f8f8' },
-  title: { fontSize: width * 0.06, fontWeight: 'bold', marginBottom: width * 0.05 },
-  card: { marginBottom: width * 0.04, borderRadius: 10, overflow: 'hidden', backgroundColor: '#fff' },
-  image: { width: '100%', height: width * 0.4 },
-  info: { padding: width * 0.03 },
-  name: { fontSize: width * 0.05, fontWeight: 'bold' },
-  description: { fontSize: width * 0.04, color: '#333', marginVertical: width * 0.02 },
-  details: { fontSize: width * 0.035, color: '#555' },
-  price: { fontSize: width * 0.045, fontWeight: 'bold', color: '#008000', marginTop: 5 },
+  // Container principal
+  container: {
+    flex: 1,
+    padding: width * 0.05,
+    backgroundColor: '#f8f8f8',
+  },
 
-  // Estilos do Modal
-  modalContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.7)' },
-  closeArea: { position: 'absolute', width: '100%', height: '100%' },
-  modalContent: { backgroundColor: '#fff', padding: 20, borderRadius: 10, alignItems: 'center', width: width * 0.9 },
-  modalImage: { width: width * 0.8, height: height * 0.4, marginBottom: 10, borderRadius: 10 },
-  modalTitle: { fontSize: width * 0.06, fontWeight: 'bold', marginBottom: 5 },
-  modalDescription: { fontSize: width * 0.04, textAlign: 'center', color: '#333', marginBottom: 10 },
-  modalPrice: { fontSize: width * 0.05, fontWeight: 'bold', color: '#008000', marginBottom: 10 },
-  button: { marginTop: 10, backgroundColor: '#333' },
+  // Título principal
+  title: {
+    fontSize: width * 0.06,
+    fontWeight: 'bold',
+    marginBottom: width * 0.05,
+  },
+
+  // Estilos do Card
+  card: {
+    marginBottom: width * 0.04,
+    borderRadius: 10,
+    overflow: 'hidden',
+    backgroundColor: '#fff',
+  },
+  image: {
+    width: '100%',
+    height: width * 0.4,
+  },
+  info: {
+    padding: width * 0.03,
+  },
+  name: {
+    fontSize: width * 0.05,
+    fontWeight: 'bold',
+  },
+  description: {
+    fontSize: width * 0.04,
+    color: '#333',
+    marginVertical: width * 0.02,
+  },
+  details: {
+    fontSize: width * 0.035,
+    color: '#555',
+  },
+  price: {
+    fontSize: width * 0.045,
+    fontWeight: 'bold',
+    color: '#008000',
+    marginTop: 5,
+  },
+
+  // Modal
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  closeArea: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+  },
+  modalContent: {
+    backgroundColor: '#fff',
+    padding: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    width: width * 0.9,
+  },
+  modalImage: {
+    width: width * 0.8,
+    height: height * 0.4,
+    marginBottom: 10,
+    borderRadius: 10,
+  },
+  modalTitle: {
+    fontSize: width * 0.06,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  modalDescription: {
+    fontSize: width * 0.04,
+    textAlign: 'center',
+    color: '#333',
+    marginBottom: 10,
+  },
+  modalPrice: {
+    fontSize: width * 0.05,
+    fontWeight: 'bold',
+    color: '#008000',
+    marginBottom: 10,
+  },
+  button: {
+    marginTop: 10,
+    backgroundColor: '#333',
+  },
 });
